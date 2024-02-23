@@ -1,3 +1,4 @@
+require("dotenv").config(); 
 const { SlashCommandBuilder } = require(`@discord.js/builders`);
 const { EmbedBuilder } = require(`discord.js`);
 
@@ -21,3 +22,6 @@ module.exports - {
     .setFooter({ text: "a footer, iconURL: ``})
 
     await interaction.reply({ embeds: [embed1] })
+  }
+}
+await client.login(process.env.BOT_TOKEN);
